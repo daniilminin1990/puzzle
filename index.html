@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- For background -->
+    <div class="content">
+        <div class="container">
+            <div class="white_box">
+                <img class="whole_pic" src="img/whole_pic.jpg" alt="whole_pic">
+                    <!-- position: absolute -->
+                <img class="puzzled_background" src="img/puzzled_whole_800x600.jpg" alt="puzzled_background">
+                    <!-- position: absolute -->
+                <!-- 800*600 display flex -->
+                <div class="cell num_1"></div>
+                <div class="cell num_2"></div>
+                <div class="cell num_3"></div>
+                <div class="cell num_4"></div>
+                <div class="cell num_5"></div>
+                <div class="cell num_6"></div>
+                <div class="cell num_7"></div>
+                <div class="cell num_8"></div>
+                <div class="cell num_9"></div>
+                <div class="cell num_10"></div>
+                <div class="cell num_11"></div>
+                <div class="cell num_12"></div>
+            </div>
+            <div class="puzzles">
+                <img class="puzzle num_1" src="img/puzzle pieces/1.png" alt="1">
+                <img class="puzzle num_2" src="img/puzzle pieces/2.png" alt="2">
+                <img class="puzzle num_3" src="img/puzzle pieces/3.png" alt="3">
+                <img class="puzzle num_4" src="img/puzzle pieces/4.png" alt="4">
+                <img class="puzzle num_5" src="img/puzzle pieces/5.png" alt="5">
+                <img class="puzzle num_6" src="img/puzzle pieces/6.png" alt="6">
+                <img class="puzzle num_7" src="img/puzzle pieces/7.png" alt="7">
+                <img class="puzzle num_8" src="img/puzzle pieces/8.png" alt="8">
+                <img class="puzzle num_9" src="img/puzzle pieces/9.png" alt="9">
+                <img class="puzzle num_10" src="img/puzzle pieces/10.png" alt="10">
+                <img class="puzzle num_11" src="img/puzzle pieces/11.png" alt="11">
+                <img class="puzzle num_12" src="img/puzzle pieces/12.png" alt="12">
+            </div>
+        </div>
+    </div>  
+    <!-- container 
+    Блок с оригинальными рисунками
+        Блок с размером 800*600, внутри него, поместить по центру либо через display flex, align-items center, vertical align center, либо position relative, top: 50%, left 50%
+            рисунок пазловый
+            блок с кусками для пазлов
+                их должно быть 12 шт. Размер 1 куска 200*200, либо скопировать их от оригинальных пазлов. visibility: hidden, чтобы они были, но их не было видно
+            конец блока с кусками для пазлов 
+            рисунок обычный - этот display: none по умолчанию. Но для него нужно будет потом display absolute, чтобы он вышел из потока и не занимал место в блоке
+        блок с рисунками кончился
+    Блок с оригинальными рисунками закончился
+    Блок с пазлами
+        12 шт
+конец container     -->
+
+    <script src="main.js"></script>
+</body>
+</html>

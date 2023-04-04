@@ -1,0 +1,284 @@
+.body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.content {
+    background-color: #ccc;
+    height: 100vh;
+}
+.container {
+    width: 850px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(img/background.jpg) no-repeat 50% 0% / 1250px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 75px;
+}
+
+
+.white_box {
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    padding: 40px;
+    border: #888 3px solid;
+    border-radius: 15px;
+    position: absolute;
+}
+.whole_pic,
+.puzzled_background {
+    opacity: 0.3;
+    width: 800px;
+    height: 600px;
+    
+}
+.whole_pic {
+    display: none;
+}
+.whole_pic.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Puzzle active for single */
+.puzzle.active {
+    cursor: grabbing;
+    display: none;
+}
+/* Puzzle background hide */
+.hide {
+    display: none;
+}
+
+/* Puzzles disappear */
+.disappear {
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes hide {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+/* Cells */
+.cell {
+    position: absolute;
+    /* border: 2px solid red; */
+
+    /* opacity: 0; */
+}
+
+/* .puzzled_background,
+.whole_pic,
+.puzzles {
+    display: none;
+} */
+
+
+/* Cells position */
+/* Понимаю, что это можно организовать через JS, но как?!. Нужно найти каждый cell.num_ например назовем const cellNum, каждому присвоить datq-id + 1,
+потом найти каждому положение типа const cellPosTop = cellNum.position.top, также cellPosLeft
+найти ширину и высоту white_box,
+потом через цикл изменить положение каждого cell
+function(() => {
+    calc(cellPosTop - white_boxHeight);
+    calc(cellPosLeft - white_boxWidth);  
+}*/
+.cell.num_1 {
+    top: 40px;
+    left: 40px;
+}
+.cell.num_2 {
+    top: 40px;
+    left: 196px;
+}
+.cell.num_3 {
+    top: 40px;
+    left: 397px;
+}
+.cell.num_4 {
+    top: 40px;
+    left: 595px;
+}
+.cell.num_5 {
+    top: 196px;
+    left: 40px;
+}
+.cell.num_6 {
+    top: 198px;
+    left: 220px;    
+}
+.cell.num_7 {
+    top: 232px;
+    left: 401px;
+}
+.cell.num_8 {
+    top: 207px;
+    left: 589px;
+}
+.cell.num_9 {
+    top: 421px;
+    left: 40px;
+}
+.cell.num_10 {
+    top: 426px;
+    left: 196px;
+}
+.cell.num_11 {
+    top: 397px;
+    left: 396px;
+}
+.cell.num_12 {
+    top: 427px;
+    left: 631px;
+}
+
+
+
+/* Puzzles and cells size */
+/* По идее можно будет потом использовать JS, чтобы написать код для автоматического определения позиции пазлов и их дырок
+ТОЛЬКО КАК ПОКА НЕ РАЗОБРАЛСЯ */
+.num_1 {
+    width: 213px;
+    height: 217px;
+}
+.num_2 {
+    width: 257px;
+    height: 220px;
+}
+.num_3 {
+    width: 256px;
+    height: 256px;
+}
+.num_4 {
+    width: 245px;
+    height: 231px;
+}
+.num_5 {
+    width: 237px;
+    height: 290px;
+}
+.num_6 {
+    width: 240px;
+    height: 288px;
+}
+.num_7 {
+    width: 249px;
+    height: 231px;
+}
+.num_8 {
+    width: 251px;
+    height: 283px;
+}
+.num_9 {
+    width: 213px;
+    height: 219px;
+}
+.num_10 {
+    width: 257px;
+    height: 214px;
+}
+.num_11 {
+    width: 294px;
+    height: 243px;
+}
+.num_12 {
+    width: 209px;
+    height: 213px;
+}
+
+/* Puzzle position */
+.puzzle {
+    position: absolute;
+}
+.puzzle.num_1 {
+    top: 50px;
+    left: 270px;
+}
+.puzzle.num_2 {
+    top: 70px;
+    left: 270px;
+    /* transform: translate(-250px, -50px); */
+}
+.puzzle.num_3 {
+    top: 500px;
+    left: 250px;
+    /* transform: translate(-300px, 150px); */
+}
+.puzzle.num_4 {
+    top: 200px;
+    left: 230px;
+    /* transform: translate(-250px, 350px); */
+}
+.puzzle.num_5 {
+    top: 600px;
+    left: 300px;
+    /* transform: translate(-200px, 250px); */
+}
+.puzzle.num_6 {
+    top: 250px;
+    left: 200px;
+    /* transform: translate(850px, -50px); */
+}
+.puzzle.num_7 {
+    top: 50px;
+    left: 1400px
+    /* transform: translate(900px, -50px); */
+}
+.puzzle.num_8 {
+    top: 150px;
+    left: 1500px;
+    /* transform: translate(900px, 150px); */ 
+}
+.puzzle.num_9 {
+    top: 600px;
+    left: 1450px;    
+    /* transform: translate(950px, 350px); */
+}
+.puzzle.num_10 {
+    top: 400px;
+    left: 1400px;
+    /* transform: translate(880px, 100px); */
+}
+.puzzle.num_11 {
+    top: 300px;
+    left: 1400px;
+    /* transform: translate(870px, 300px); */
+}
+.puzzle.num_12 {
+    top: 550px;
+    left: 1350px;
+    /* transform: translate(900px, 500px); */
+}
+
+/* 
+КАК РАСПОЛОЖИТЬ ЭЛЕМЕНТЫ ABSOLUTE по центру страницы? И вне зависимости от прокрутки страницы???
+
+Container
+ с бэк имэдж, возможно перекрытие, либо прозрачность, если можно.
+container 
+    Блок с оригинальными рисунками
+        Блок с размером 800*600, внутри него, поместить по центру либо через display flex, align-items center, vertical align center, либо position relative, top: 50%, left 50%
+            рисунок пазловый
+            блок с кусками для пазлов
+                их должно быть 12 шт. Размер 1 куска 200*200, либо скопировать их от оригинальных пазлов. visibility: hidden, чтобы они были, но их не было видно
+            конец блока с кусками для пазлов 
+            рисунок обычный - этот display: none по умолчанию. Но для него нужно будет потом display absolute, чтобы он вышел из потока и не занимал место в блоке
+        блок с рисунками кончился
+    Блок с оригинальными рисунками закончился
+    Блок с пазлами
+        12 шт
+конец container    
+
+
+
+
+
+*/
